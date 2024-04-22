@@ -38,7 +38,7 @@ function SideBar() {
                   
                     <Link
                     to="/admin-dashboard/dashboard"
-                      className="list-group-item border-end-0 d-inline-block text-truncate set-a"
+                      className="listf-group-item border-end-0 d-inline-block text-truncate set-a"
                     >
                       <img
                         src={dashboard}
