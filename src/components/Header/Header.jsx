@@ -45,7 +45,16 @@ function Header() {
                     Current Opening
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
+                <li className="nav-item">
+                  <Link
+                    to="/academics-jobs"
+                    className="nav-link active"
+                    aria-current="page"
+                  >
+                   Job Profiles
+                  </Link>
+                </li>
+                {/* <li className="nav-item dropdown">
                   <Link
                     // to="/job-profile"
                     className="nav-link dropdown-toggle"
@@ -82,7 +91,7 @@ function Header() {
                       </Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <Link to="/interview-schedule" className="nav-link">
