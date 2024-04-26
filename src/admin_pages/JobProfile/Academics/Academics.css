@@ -16,7 +16,13 @@
 .dept-name {
   text-transform: capitalize;
 }
+.dept-name:not(.collapsed)::after {
+  background-image: url("../../../assets/logos/arrow.png") !important;
+}
 
+.dept-name::after {
+  background-image: url("../../../assets/logos/arrow.png") !important;
+}
 .apply-for-dean p {
   font-size: 40px;
   font-family: "Open Sans", sans-serif;
