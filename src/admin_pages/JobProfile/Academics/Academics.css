@@ -16,13 +16,6 @@
 .dept-name {
   text-transform: capitalize;
 }
-.dept-name:not(.collapsed)::after {
-  background-image: url("../../../assets/logos/arrow.png") !important;
-}
-
-.dept-name::after {
-  background-image: url("../../../assets/logos/arrow.png") !important;
-}
 
 .apply-for-dean p {
   font-size: 40px;
@@ -33,7 +26,9 @@
   max-width: 1220px;
   margin: auto;
 }
-
+.accordion-button {
+  text-transform: capitalize;
+}
 /* .apply-for-dean button {
   border: none;
   padding: 10px;
@@ -88,7 +83,6 @@
   padding-right: 20px;
 }
 
-/* ......................................... */
 details {
   font-size: 16px;
   padding-bottom: 1%;
@@ -142,7 +136,6 @@ details[open] > summary {
   margin-top: 15px;
 }
 
-/* ......................................... */
 @media only screen and (max-width: 767px) {
   .my-table {
     margin-left: 5%;

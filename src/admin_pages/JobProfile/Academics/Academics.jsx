@@ -6,7 +6,8 @@ import Accordion from "react-bootstrap/Accordion";
 import adminApiService from "../../adminApiService";
 
 function Academics() {
-  const [activeKey, setActiveKey] = useState(null);
+  // const [activeKey, setActiveKey] = useState(null);
+  const [activeKey, setActiveKey] = useState("0");
 
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [jobprofileData, setJobprofileData] = useState([]);
