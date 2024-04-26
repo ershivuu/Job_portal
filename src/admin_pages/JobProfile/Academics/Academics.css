@@ -7,12 +7,21 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
   -ms-flex-pack: distribute;
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
   margin-top: 50px;
+}
+.dept-name {
+  text-transform: capitalize;
+}
+.dept-name:not(.collapsed)::after {
+  background-image: url("../../../assets/logos/arrow.png") !important;
+}
+
+.dept-name::after {
+  background-image: url("../../../assets/logos/arrow.png") !important;
 }
 
 .apply-for-dean p {
@@ -65,8 +74,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 10.3%;
-  margin-right: 10.3%;
+  margin-left: 8.9%;
+  margin-right: 8.9%;
 }
 
 .table thead th,
@@ -123,8 +132,8 @@ details[open] #my-dropdown::before {
 details[open] > summary {
   background-color: white;
 }
-
-/* .table-dropdown {
+/* 
+.table-dropdown {
   margin-left: 10.3%;
   margin-right: 10.3%;
 } */
@@ -140,12 +149,15 @@ details[open] > summary {
     margin-right: 5%;
   }
 
-  .table-dropdown {
+  /* .table-dropdown {
     margin-left: 5%;
     margin-right: 5%;
-  }
+  } */
 
   #my-dropdown {
     text-align: center;
+  }
+  .courses {
+    margin-left: 2%;
   }
 }
