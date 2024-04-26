@@ -14,7 +14,9 @@ function Academics() {
 
   const fetchData = async () => {
     try {
-      const response = await adminApiService.getJobProfile(selectedDepartment);
+      const response = await adminApiService.getJobProfileByCnD(
+        selectedDepartment
+      );
       console.log("API response:", response.jobprofileData);
       setJobprofileData(response.jobprofileData);
     } catch (error) {
@@ -60,6 +62,43 @@ function Academics() {
           Sciences | Fashion | Research & Development | Polytechnic
         </p> */}
       </div>
+
+      {/* <div className="my-table table-responsive">
+        <Accordion activeKey={activeKey} onSelect={handleAccordionToggle}>
+          {uniqueDepartments.map((dept, index) => (
+            <Accordion.Item key={index} eventKey={index.toString()}>
+              <Accordion.Header>{dept}</Accordion.Header>
+              <Accordion.Body>
+                <div className="table-dropdown">
+                  <div className="drp-table table-responsive">
+                    
+                    <table className="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Designation</th>
+                          <th scope="col">Qualification and experience</th>
+                          <th scope="col">Highly desirable</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {jobprofileData
+                          .filter((profile) => profile.department_master.dept_name === dept)
+                          .map((profile, profileIndex) => (
+                            <tr key={profileIndex}>
+                              <th scope="row">{profile.applied_post_master.post_name}</th>
+                              <td>{profile.education_require}</td>
+                              <td>{profile.qualification_require}</td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion>
+      </div> */}
 
       <div className="jd-dropdown">
         <div class="accordion accordion-flush" id="accordionFlushExample">
