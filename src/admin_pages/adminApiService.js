@@ -20,7 +20,7 @@ const adminApiService = {
       return response.data;
     } catch (error) {
       throw new Error(`Error fetching data: ${error.message}`);
-    } 
+    }
   },
   DeleteCategory: async (categoryId) => {
     try {
@@ -370,7 +370,7 @@ const adminApiService = {
     } catch (error) {
       Notification({
         open: true,
-        handleClose: () => { }, // Define handleClose function if needed
+        handleClose: () => {}, // Define handleClose function if needed
         alertMessage: `Error posting job profile: ${error.message}`,
         alertSeverity: "error",
       });
@@ -684,7 +684,13 @@ const adminApiService = {
       throw error;
     }
   },
-  getAllInterview: async (currentPage,itemsPerPage,categoryValue,departValue,PostValue) => {
+  getAllInterview: async (
+    currentPage,
+    itemsPerPage,
+    categoryValue,
+    departValue,
+    PostValue
+  ) => {
     try {
       const response = await axios.get(
         `${ADMIN_BASE_URL}/jobProfileMaster/getJobProfilePaginatedNSorted?limit=${itemsPerPage}&page=${currentPage}&category_name=${categoryValue}&dept_name=${departValue}&post_name=${PostValue}`,
@@ -700,6 +706,7 @@ const adminApiService = {
       throw error;
     }
   },
+
   changeJobProfileIsActive: async (jobProfileId, isActive) => {
     try {
       const response = await axios.put(
@@ -741,7 +748,7 @@ const adminApiService = {
         formData,
         {
           headers: {
-            "access-token":getAccessToken() ,
+            "access-token": getAccessToken(),
           },
         }
       );
@@ -775,9 +782,9 @@ const adminApiService = {
         `${ADMIN_BASE_URL}/visitor/removeVisitor`,
         {
           headers: {
-            "access-token": getAccessToken()
+            "access-token": getAccessToken(),
           },
-          data: payloadData 
+          data: payloadData,
         }
       );
       console.log("Save Changes Response:", response);
@@ -788,20 +795,21 @@ const adminApiService = {
     }
   },
 
-
   getAllCounts: async () => {
     try {
-      const response = await axios.get(`${ADMIN_BASE_URL}/reports/getCountReport`, {
-        headers: {
-          "access-token": getAccessToken(),
-        },
-      });
+      const response = await axios.get(
+        `${ADMIN_BASE_URL}/reports/getCountReport`,
+        {
+          headers: {
+            "access-token": getAccessToken(),
+          },
+        }
+      );
       return response.data;
     } catch (error) {
       throw new Error(`Error fetching data: ${error.message}`);
     }
   },
-
 
   getJobProfileByCnD: async (departmentName) => {
     try {
@@ -819,7 +827,6 @@ const adminApiService = {
       throw error;
     }
   },
-  
 };
 
 function getAccessToken() {
